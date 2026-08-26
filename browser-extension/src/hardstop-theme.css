@@ -1,0 +1,181 @@
+/*
+ * HardStop extension theme.
+ * Source of truth: apps/windows-client/native-ui/LockOutApp.cs.
+ * Keep these values synchronized with the native desktop design system.
+ */
+:root {
+  color-scheme: dark;
+  --hs-background: #0a0c10;
+  --hs-sidebar: #0e1015;
+  --hs-surface: #14171d;
+  --hs-surface-raised: #181b22;
+  --hs-input: #171a20;
+  --hs-border: #292e38;
+  --hs-border-subtle: #292e38;
+  --hs-border-strong: #343a46;
+  --hs-foreground: #f5f7fa;
+  --hs-muted: #a7afbc;
+  --hs-faint: #737c8a;
+  --hs-accent: #ff3b3b;
+  --hs-accent-hover: #d92f36;
+  --hs-accent-soft: #2a1518;
+  --hs-warning: #f0b84b;
+  --hs-warning-soft: #2a2013;
+  --hs-success: #55c58a;
+  --hs-success-soft: #14271e;
+  --hs-success-border: #2d6d49;
+  --hs-disabled: #1f2229;
+  --hs-disabled-text: #69707b;
+  --hs-card-radius: 16px;
+  --hs-control-radius: 11px;
+  --hs-font: "Segoe UI", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  color: var(--hs-foreground);
+  background: var(--hs-background);
+  font-family: var(--hs-font);
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.hs-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.hs-brand__logo {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  object-fit: contain;
+}
+
+.hs-brand__name {
+  margin: 0;
+  color: var(--hs-foreground);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hs-brand__slogan {
+  margin: 5px 0 0;
+  color: var(--hs-muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.hs-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--hs-border);
+  border-radius: 999px;
+  color: var(--hs-muted);
+  background: var(--hs-surface);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hs-status__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hs-faint);
+}
+
+.hs-status[data-state="active"] {
+  border-color: var(--hs-success-border);
+  color: var(--hs-success);
+  background: var(--hs-success-soft);
+}
+
+.hs-status[data-state="active"] .hs-status__dot {
+  background: var(--hs-success);
+}
+
+.hs-status[data-state="error"] {
+  border-color: var(--hs-border-strong);
+  color: var(--hs-accent-hover);
+  background: var(--hs-accent-soft);
+}
+
+.hs-status[data-state="error"] .hs-status__dot {
+  background: var(--hs-accent);
+}
+
+.hs-card {
+  border: 1px solid var(--hs-border);
+  border-radius: var(--hs-card-radius);
+  background: var(--hs-surface);
+}
+
+.hs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: var(--hs-control-radius);
+  padding: 0 16px;
+  color: #ffffff;
+  background: var(--hs-accent);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hs-button:hover {
+  background: var(--hs-accent-hover);
+}
+
+.hs-button:focus-visible {
+  outline: 3px solid rgba(255, 59, 59, 0.3);
+  outline-offset: 2px;
+}
+
+.hs-button--secondary {
+  border-color: var(--hs-border);
+  color: var(--hs-foreground);
+  background: var(--hs-surface-raised);
+}
+
+.hs-button--secondary:hover {
+  border-color: var(--hs-border-strong);
+  background: var(--hs-accent-soft);
+}
+
+.hs-button--quiet {
+  border-color: var(--hs-border);
+  color: var(--hs-muted);
+  background: transparent;
+}
+
+.hs-button--quiet:hover {
+  color: var(--hs-foreground);
+  background: var(--hs-surface-raised);
+}

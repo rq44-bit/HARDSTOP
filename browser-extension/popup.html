@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HardStop</title>
+    <link rel="stylesheet" href="src/hardstop-theme.css">
+    <link rel="stylesheet" href="src/popup.css">
+  </head>
+  <body>
+    <main class="popup-shell">
+      <header class="popup-header">
+        <div class="hs-brand">
+          <img class="hs-brand__logo" src="assets/hardstop-logo-48.png" alt="">
+          <p class="hs-brand__name">HARDSTOP</p>
+        </div>
+        <div id="protection-status" class="hs-status" data-state="starting" role="status" aria-live="polite">
+          <span class="hs-status__dot" aria-hidden="true"></span>
+          <span id="protection-status-label">Checking</span>
+        </div>
+      </header>
+
+      <section class="hs-card timer-card" aria-labelledby="timer-label">
+        <p id="timer-label" class="timer-label">Protection remaining</p>
+        <output id="remaining-time" class="remaining-time">--d --h --m</output>
+        <p id="lock-date" class="lock-date">Checking lock expiration...</p>
+        <p id="connection-status" class="connection-status" data-state="starting">Checking connection</p>
+      </section>
+
+      <a class="hs-button hs-button--secondary open-hardstop" href="hardstop://open">
+        <span>Open HardStop</span>
+        <span class="button-arrow" aria-hidden="true">&#8594;</span>
+      </a>
+      <p id="popup-message" class="popup-message" aria-live="polite">Protection stays active when this window is closed.</p>
+    </main>
+    <script src="src/popup.js"></script>
+  </body>
+</html>

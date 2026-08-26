@@ -1,0 +1,242 @@
+{
+  "manifest_version": 3,
+  "name": "HardStop Browser Blocker",
+  "version": "0.4.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4cVACXNITnrJbcUWXamyFeWLYO1A5qzo52/4ICVBek9b+vR9tvQXvNm5sx3wQujWM0a8k+LGbbR5/ILEqvHitMx0F6SSegC4QfKzX9Ndh21WLoa4HFzsnkIloTlsEvpBFBnHJUzCBsyo/cM6Iw0STjKIrllQOA34RKKebn/ZCXfrlWf1X5hFbQw5tdRiVHf0mVqSrOe31dZu2OOfNHQVYJROy323l8Oh2zNex5ysBMmMajiwf9WpO33os73VdNBEyRvBpOyQmX7okmr0z3MFa2VvB5YQ6M6sPYMzfWGvk2JogXLbheOE9x+EaNgs29tAOvucsI6bvu77edZ+xhS3QQIDAQAB",
+  "description": "Voluntary gambling-site blocking for Chrome, Edge, Brave, and other Chromium browsers.",
+  "minimum_chrome_version": "121",
+  "icons": {
+    "16": "assets/hardstop-logo-16.png",
+    "32": "assets/hardstop-logo-32.png",
+    "48": "assets/hardstop-logo-48.png",
+    "128": "assets/hardstop-logo-128.png"
+  },
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "tabs",
+    "webNavigation",
+    "storage",
+    "alarms",
+    "nativeMessaging"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "gambling_static_001",
+        "enabled": true,
+        "path": "rulesets/gambling-static-001.json"
+      },
+      {
+        "id": "gambling_static_002",
+        "enabled": true,
+        "path": "rulesets/gambling-static-002.json"
+      },
+      {
+        "id": "gambling_static_003",
+        "enabled": true,
+        "path": "rulesets/gambling-static-003.json"
+      },
+      {
+        "id": "gambling_static_004",
+        "enabled": false,
+        "path": "rulesets/gambling-static-004.json"
+      },
+      {
+        "id": "gambling_static_005",
+        "enabled": false,
+        "path": "rulesets/gambling-static-005.json"
+      },
+      {
+        "id": "gambling_static_006",
+        "enabled": false,
+        "path": "rulesets/gambling-static-006.json"
+      },
+      {
+        "id": "gambling_static_007",
+        "enabled": false,
+        "path": "rulesets/gambling-static-007.json"
+      },
+      {
+        "id": "gambling_static_008",
+        "enabled": false,
+        "path": "rulesets/gambling-static-008.json"
+      },
+      {
+        "id": "gambling_static_009",
+        "enabled": false,
+        "path": "rulesets/gambling-static-009.json"
+      },
+      {
+        "id": "gambling_static_010",
+        "enabled": false,
+        "path": "rulesets/gambling-static-010.json"
+      },
+      {
+        "id": "gambling_static_011",
+        "enabled": false,
+        "path": "rulesets/gambling-static-011.json"
+      },
+      {
+        "id": "gambling_static_012",
+        "enabled": false,
+        "path": "rulesets/gambling-static-012.json"
+      },
+      {
+        "id": "gambling_static_013",
+        "enabled": false,
+        "path": "rulesets/gambling-static-013.json"
+      },
+      {
+        "id": "gambling_static_014",
+        "enabled": false,
+        "path": "rulesets/gambling-static-014.json"
+      },
+      {
+        "id": "gambling_static_015",
+        "enabled": false,
+        "path": "rulesets/gambling-static-015.json"
+      },
+      {
+        "id": "gambling_static_016",
+        "enabled": false,
+        "path": "rulesets/gambling-static-016.json"
+      },
+      {
+        "id": "gambling_static_017",
+        "enabled": false,
+        "path": "rulesets/gambling-static-017.json"
+      },
+      {
+        "id": "gambling_static_018",
+        "enabled": false,
+        "path": "rulesets/gambling-static-018.json"
+      },
+      {
+        "id": "gambling_static_019",
+        "enabled": false,
+        "path": "rulesets/gambling-static-019.json"
+      },
+      {
+        "id": "gambling_static_020",
+        "enabled": false,
+        "path": "rulesets/gambling-static-020.json"
+      },
+      {
+        "id": "gambling_static_021",
+        "enabled": false,
+        "path": "rulesets/gambling-static-021.json"
+      },
+      {
+        "id": "gambling_static_022",
+        "enabled": false,
+        "path": "rulesets/gambling-static-022.json"
+      },
+      {
+        "id": "gambling_static_023",
+        "enabled": false,
+        "path": "rulesets/gambling-static-023.json"
+      },
+      {
+        "id": "gambling_static_024",
+        "enabled": false,
+        "path": "rulesets/gambling-static-024.json"
+      },
+      {
+        "id": "gambling_static_025",
+        "enabled": false,
+        "path": "rulesets/gambling-static-025.json"
+      },
+      {
+        "id": "gambling_static_026",
+        "enabled": false,
+        "path": "rulesets/gambling-static-026.json"
+      },
+      {
+        "id": "gambling_static_027",
+        "enabled": false,
+        "path": "rulesets/gambling-static-027.json"
+      },
+      {
+        "id": "gambling_static_028",
+        "enabled": false,
+        "path": "rulesets/gambling-static-028.json"
+      },
+      {
+        "id": "gambling_static_029",
+        "enabled": false,
+        "path": "rulesets/gambling-static-029.json"
+      },
+      {
+        "id": "gambling_static_030",
+        "enabled": false,
+        "path": "rulesets/gambling-static-030.json"
+      },
+      {
+        "id": "gambling_static_031",
+        "enabled": false,
+        "path": "rulesets/gambling-static-031.json"
+      },
+      {
+        "id": "gambling_static_032",
+        "enabled": false,
+        "path": "rulesets/gambling-static-032.json"
+      },
+      {
+        "id": "gambling_static_033",
+        "enabled": false,
+        "path": "rulesets/gambling-static-033.json"
+      },
+      {
+        "id": "gambling_static_034",
+        "enabled": false,
+        "path": "rulesets/gambling-static-034.json"
+      },
+      {
+        "id": "gambling_static_035",
+        "enabled": false,
+        "path": "rulesets/gambling-static-035.json"
+      },
+      {
+        "id": "gambling_static_036",
+        "enabled": false,
+        "path": "rulesets/gambling-static-036.json"
+      },
+      {
+        "id": "gambling_heuristics",
+        "enabled": true,
+        "path": "rulesets/aggressive-heuristics.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "HardStop",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/hardstop-logo-16.png",
+      "32": "assets/hardstop-logo-32.png",
+      "48": "assets/hardstop-logo-48.png",
+      "128": "assets/hardstop-logo-128.png"
+    }
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "blocked.html"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ]
+}

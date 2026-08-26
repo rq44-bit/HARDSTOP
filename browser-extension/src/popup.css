@@ -1,0 +1,108 @@
+body {
+  width: 360px;
+  overflow: hidden;
+}
+
+.popup-shell {
+  padding: 18px;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.timer-card {
+  margin-top: 18px;
+  padding: 19px 20px 18px;
+  border-color: var(--hs-success-border);
+  background: var(--hs-success-soft);
+}
+
+.timer-label,
+.lock-date,
+.connection-status,
+.popup-message {
+  margin: 0;
+}
+
+.timer-label {
+  color: var(--hs-muted);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.remaining-time {
+  display: block;
+  min-height: 42px;
+  margin-top: 6px;
+  color: var(--hs-foreground);
+  font-size: 31px;
+  font-weight: 800;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.lock-date {
+  margin-top: 7px;
+  color: var(--hs-success);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.connection-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  margin-top: 11px;
+  color: var(--hs-faint);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.connection-status::before {
+  width: 7px;
+  height: 7px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--hs-faint);
+  content: "";
+}
+
+.connection-status[data-state="active"] {
+  color: var(--hs-success);
+}
+
+.connection-status[data-state="active"]::before {
+  background: var(--hs-success);
+}
+
+.connection-status[data-state="error"] {
+  color: var(--hs-warning);
+}
+
+.connection-status[data-state="error"]::before {
+  background: var(--hs-warning);
+}
+
+.open-hardstop {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.button-arrow {
+  color: var(--hs-warning);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.popup-message {
+  min-height: 17px;
+  margin-top: 11px;
+  color: var(--hs-faint);
+  font-size: 11px;
+  line-height: 1.4;
+  text-align: center;
+}

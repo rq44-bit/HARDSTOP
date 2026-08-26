@@ -13,6 +13,8 @@ The current installer is not digitally signed. Windows may display an Unknown Pu
 
 ## Source Code and License
 
-The HardStop source code is private and is not included in this repository or its releases.
+The HardStop Windows application source code is private and is not included in this repository or its releases.
+
+The auditable browser-extension package is available in [`browser-extension`](browser-extension). It is provided for supported Chromium browser setup and does not include the private Windows application, backend services, credentials, certificates, or signing keys.
 
 Copyright (c) 2026 HardStop. All rights reserved. No permission is granted to copy, modify, redistribute, reverse engineer, or create derivative works except where applicable law expressly permits it.

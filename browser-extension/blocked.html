@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blocked by HardStop</title>
+    <link rel="stylesheet" href="src/hardstop-theme.css">
+    <link rel="stylesheet" href="src/blocked.css">
+  </head>
+  <body>
+    <main class="blocked-shell">
+      <header class="blocked-header">
+        <div class="hs-brand">
+          <img class="hs-brand__logo blocked-logo" src="assets/hardstop-logo-96.png" alt="">
+          <div>
+            <p class="hs-brand__name">HARDSTOP</p>
+            <p class="hs-brand__slogan">Block the Bet. Build Your Future.</p>
+          </div>
+        </div>
+        <div id="protection-status" class="hs-status" data-state="active" role="status" aria-live="polite">
+          <span class="hs-status__dot" aria-hidden="true"></span>
+          <span id="protection-status-label">Protection Active</span>
+        </div>
+      </header>
+
+      <section class="blocked-copy" aria-labelledby="blocked-title">
+        <p class="blocked-eyebrow">ACCESS RESTRICTED</p>
+        <h1 id="blocked-title">HardStop blocked this site.</h1>
+        <p>This website is restricted by your active protection settings.</p>
+      </section>
+
+      <section class="hs-card timer-card" aria-labelledby="timer-label">
+        <p id="timer-label" class="timer-label">Protection remaining</p>
+        <output id="remaining-time" class="remaining-time">Checking...</output>
+        <p id="lock-date" class="lock-date">Confirming your lock period</p>
+      </section>
+
+      <div class="blocked-actions">
+        <button id="return-to-safety" class="hs-button" type="button">Return to Safety</button>
+        <a class="hs-button hs-button--secondary" href="hardstop://resources">Open Resources</a>
+      </div>
+      <p id="policy-status" class="offline-note">Your verified local blocklist continues protecting this browser while offline.</p>
+    </main>
+    <script src="src/blocked.js"></script>
+  </body>
+</html>

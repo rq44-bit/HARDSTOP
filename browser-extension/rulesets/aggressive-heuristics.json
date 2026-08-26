@@ -1,0 +1,137 @@
+[
+  {
+    "id": 40000,
+    "priority": 10,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "requestDomains": ["block-test.hardstop.app"],
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame"]
+    }
+  },
+  {
+    "id": 40001,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/?#]+\\.casino([/:?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40002,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/?#]+\\.poker([/:?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40003,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://[^/?#]+\\.bet([/:?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40004,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*[a-z0-9-]*casino[a-z0-9-]*(\\.[a-z0-9-]+)+(:[0-9]+)?([/?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40005,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*[a-z0-9-]*sportsbook[a-z0-9-]*(\\.[a-z0-9-]+)+(:[0-9]+)?([/?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40006,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*[a-z0-9-]*bookmaker[a-z0-9-]*(\\.[a-z0-9-]+)+(:[0-9]+)?([/?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40007,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*[a-z0-9-]*betting[a-z0-9-]*(\\.[a-z0-9-]+)+(:[0-9]+)?([/?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  },
+  {
+    "id": 40008,
+    "priority": 2,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "extensionPath": "/blocked.html"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://([a-z0-9-]+\\.)*[a-z0-9-]*slots?[a-z0-9-]*(\\.[a-z0-9-]+)+(:[0-9]+)?([/?#]|$)",
+      "requestMethods": ["connect", "delete", "get", "head", "options", "patch", "post", "put", "trace"],
+      "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "websocket", "other"]
+    }
+  }
+]

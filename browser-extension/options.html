@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HardStop Options</title>
+    <link rel="stylesheet" href="src/hardstop-theme.css">
+    <link rel="stylesheet" href="src/options.css">
+  </head>
+  <body>
+    <main class="options-shell">
+      <header>
+        <div class="brand-lockup">
+          <img class="brand-logo" src="assets/hardstop-logo-96.png" alt="">
+          <div>
+            <p class="eyebrow">HardStop</p>
+            <h1>Browser Blocker Options</h1>
+          </div>
+        </div>
+        <p>Manage extra domains, custom imports, support resources, and privacy settings.</p>
+      </header>
+
+      <section class="section">
+        <h2>Import Hosts File</h2>
+        <p>Import a plain hosts-style file or one-domain-per-line list. Imported domains are added as custom dynamic browser rules until the browser rule limit is reached.</p>
+        <input id="hosts-file" type="file" accept=".txt,.hosts,text/plain">
+        <button id="import-hosts" type="button">Import</button>
+        <p id="import-result" class="result" aria-live="polite"></p>
+      </section>
+
+      <section class="section">
+        <h2>Aggressive Matching</h2>
+        <p>Aggressive rules block gambling-related domains and gambling-specific TLDs. This can overblock some harmless pages.</p>
+        <button id="enable-aggressive" type="button">Enable Aggressive Rules</button>
+      </section>
+
+      <section class="section">
+        <h2>Privacy</h2>
+        <label class="checkbox">
+          <input id="local-events" type="checkbox">
+          Keep local blocked-event counts
+        </label>
+        <p>No browsing history is uploaded by this extension.</p>
+      </section>
+
+      <section class="section">
+        <h2>Sources</h2>
+        <p>The packaged gambling list is derived from The Block List Project gambling hosts list, MIT license, plus a small curated seed list.</p>
+        <a href="https://github.com/blocklistproject/Lists/blob/master/gambling.txt">Open Source List</a>
+      </section>
+    </main>
+    <script src="src/options.js"></script>
+  </body>
+</html>
